@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Now – SafeSeat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">🚌 SafeSeat</h1>
+    <p>Book your bus seat in advance. Travel stress-free.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book Now</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="booking-form">
+    <h2>🧾 Book Your Seat</h2>
+    <p>Fill in your trip details below:</p>
+
+    <form action="#">
+      <label>From:
+  <select>
+    <option>Burera</option>
+    <option>Gakenke</option>
+    <option>Gicumbi</option>
+    <option>Musanze</option>
+    <option>Rulindo</option>
+    <option>Gisagara</option>
+    <option>Huye</option>
+    <option>Kamonyi</option>
+    <option>Muhanga</option>
+    <option>Nyamagabe</option>
+    <option>Nyanza</option>
+    <option>Nyaruguru</option>
+    <option>Ruhango</option>
+    <option>Karongi</option>
+    <option>Ngororero</option>
+    <option>Nyamasheke</option>
+    <option>Nyabihu</option>
+    <option>Rubavu</option>
+    <option>Rusizi</option>
+    <option>Rutsiro</option>
+    <option>Bugesera</option>
+    <option>Gatsibo</option>
+    <option>Kayonza</option>
+    <option>Kirehe</option>
+    <option>Ngoma</option>
+    <option>Nyagatare</option>
+    <option>Rwamagana</option>
+  </select>
+      </label>
+      <br><br>
+
+      <label>To:
+  <select>
+    <option>Burera</option>
+    <option>Gakenke</option>
+    <option>Gicumbi</option>
+    <option>Musanze</option>
+    <option>Rulindo</option>
+    <option>Gisagara</option>
+    <option>Huye</option>
+    <option>Kamonyi</option>
+    <option>Muhanga</option>
+    <option>Nyamagabe</option>
+    <option>Nyanza</option>
+    <option>Nyaruguru</option>
+    <option>Ruhango</option>
+    <option>Karongi</option>
+    <option>Ngororero</option>
+    <option>Nyamasheke</option>
+    <option>Nyabihu</option>
+    <option>Rubavu</option>
+    <option>Rusizi</option>
+    <option>Rutsiro</option>
+    <option>Bugesera</option>
+    <option>Gatsibo</option>
+    <option>Kayonza</option>
+    <option>Kirehe</option>
+    <option>Ngoma</option>
+    <option>Nyagatare</option>
+    <option>Rwamagana</option> 
+        </select>
+      </label>
+      <br><br>
+
+      <label>Travel Date:
+        <input type="date">
+      </label>
+      <br><br>
+
+      <label>Number of Seats:
+        <input type="number" min="1" max="10">
+      </label>
+      <br><br>
+
+      <input type="submit" value="Confirm Booking" class="cta-button">
+    </form>
+  </section>
+  <footer>
+    <p>© 2025 SafeSeat. Travel smart, travel safe.</p>
+  </footer>
+  <script>
+  const form = document.querySelector("form");
+  const fromSelect = form.querySelector("select:nth-of-type(1)");
+  const toSelect = form.querySelector("select:nth-of-type(2)");
+
+  form.addEventListener("submit", function(event) {
+    if (fromSelect.value === toSelect.value) {
+      alert("⚠️ 'From' and 'To' cannot be the same district.");
+      event.preventDefault(); // stops the form from submitting
+    }
+  });
+</script>
+<label>Select Bus Agency:
+  <select>
+    <option>Volcano</option>
+    <option>Virunga</option>
+    <option>International</option>
+    <option>Ritco</option>
+    <option>Kigali Coach</option>
+    <option>Different</option>
+  </select>
+</label>
+<br><br>
+</body>
+</html>
+
+

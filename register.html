@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register – SafeSeat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">🚌 SafeSeat</h1>
+    <p>Create your account below</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book Now</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="features">
+    <h2>📝 Register</h2>
+    <form id="registrationForm">
+      <label>Full Name:
+        <input type="text" required>
+      </label><br><br>
+
+      <label>Email:
+        <input type="email" required>
+      </label><br><br>
+
+      <label>Phone Number:
+        <input type="tel" required>
+      </label><br><br>
+
+      <label>Password:
+        <input type="password" required>
+      </label><br><br>
+
+      <label>Registering As:
+        <select id="userType" required>
+          <option value="traveler">Traveler</option>
+          <option value="worker">Agency Worker</option>
+        </select>
+      </label><br><br>
+
+      <div id="workerFields" style="display:none;">
+        <label>Agency Name:
+          <select>
+            <option>Volcano</option>
+            <option>Virunga</option>
+            <option>International</option>
+            <option>Ritco</option>
+            <option>Kigali Coach</option>
+            <option>Different</option>
+          </select>
+        </label><br><br>
+
+        <label>Upload Work ID or Approval Letter:
+          <input type="file" accept=".pdf,.jpg,.png" required>
+        </label><br><br>
+      </div>
+
+      <input type="submit" value="Register" class="cta-button">
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 SafeSeat. Travel smart, travel safe.</p>
+  </footer>
+
+  <script>
+    const userType = document.getElementById("userType");
+    const workerFields = document.getElementById("workerFields");
+
+    userType.addEventListener("change", () => {
+      if (userType.value === "worker") {
+        workerFields.style.display = "block";
+      } else {
+        workerFields.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
